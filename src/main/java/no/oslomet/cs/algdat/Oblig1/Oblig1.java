@@ -49,7 +49,14 @@ public class Oblig1 {
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        throw new IllegalStateException();
+        for(int i = 1; i < a.length; i++){
+            if(a[i - 1] > a[i]){
+                throw new IllegalStateException("Tabell er ikke sortert stigende");
+            }
+        }
+        int u = 0; //Hjelpevariabel
+
+        return u;
     }
 
     ///// Oppgave 3 //////////////////////////////////////
