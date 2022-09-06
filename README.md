@@ -1,3 +1,5 @@
+Fått tilgangen tilbake på mindre andre konto, har derfor kopiert repoen over på https://github.com/adrkaar/algo
+
 # Obligatorisk oppgave 1 i Algoritmer og Datastrukturer
 
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
