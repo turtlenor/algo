@@ -15,11 +15,11 @@ public class Oblig1 {
 
         int m = 0;
 
-        for(int i = 0; i < a.length; ++i){
+        for(int i = 1; i < a.length; i++){
             if(a[m] > a[i]){
                 bytt(a, i, m);
-                m++;
             }
+            m++;
         }
         return a[a.length - 1];
     }
@@ -31,7 +31,11 @@ public class Oblig1 {
     }
 
     public static int ombyttinger(int[] a) {
-        throw new UnsupportedOperationException();
+        if(a.length < 1)
+        throw new java.util.NoSuchElementException("Tom tabell");
+        int m = 0; //Midlertidlig
+
+        return m;
     }
 
     ///// Oppgave 2 //////////////////////////////////////
