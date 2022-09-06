@@ -32,15 +32,24 @@ public class Oblig1 {
 
     public static int ombyttinger(int[] a) {
         if(a.length < 1)
-        throw new java.util.NoSuchElementException("Tom tabell");
-        int m = 0; //Midlertidlig
+        throw new java.util.NoSuchElementException("Tabellen er tom");
+        int m = 0;
+        int j = 0;
 
-        return m;
+        for(int i = 1; i <a.length; i++){
+            if(a[m] > a[i]){
+                bytt(a,i,m);
+                j++;
+            }
+            m++;
+        }
+
+        return j;
     }
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        throw new UnsupportedOperationException();
+        throw new IllegalStateException();
     }
 
     ///// Oppgave 3 //////////////////////////////////////
