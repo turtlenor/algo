@@ -3,13 +3,31 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.NoSuchElementException;
 
 public class Oblig1 {
     private Oblig1() {}
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-    throw new UnsupportedOperationException();
+
+        if(a.length < 1) throw new NoSuchElementException("Tabellen er tom");
+
+        int m = 0;
+
+        for(int i = 0; i < a.length; ++i){
+            if(a[m] > a[i]){
+                bytt(a, i, m);
+                m++;
+            }
+        }
+        return m;
+    }
+
+    //Hjelpe metode fra kompendiet
+    public static void bytt(int[] a, int i, int j)
+    {
+        int temp = a[i]; a[i] = a[j]; a[j] = temp;
     }
 
     public static int ombyttinger(int[] a) {
