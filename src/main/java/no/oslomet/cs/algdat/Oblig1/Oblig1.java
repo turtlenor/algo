@@ -3,22 +3,53 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.NoSuchElementException;
 
 public class Oblig1 {
     private Oblig1() {}
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-    throw new UnsupportedOperationException();
+
+        if(a.length < 1) throw new NoSuchElementException("Tabellen er tom");
+
+        int m = 0;
+
+        for(int i = 1; i < a.length; i++){
+            if(a[m] > a[i]){
+                bytt(a, i, m);
+            }
+            m++;
+        }
+        return a[a.length - 1];
+    }
+
+    //Hjelpe metode fra kompendiet
+    public static void bytt(int[] a, int i, int j)
+    {
+        int temp = a[i]; a[i] = a[j]; a[j] = temp;
     }
 
     public static int ombyttinger(int[] a) {
-        throw new UnsupportedOperationException();
+        if(a.length < 1)
+        throw new java.util.NoSuchElementException("Tabellen er tom");
+        int m = 0;
+        int j = 0;
+
+        for(int i = 1; i <a.length; i++){
+            if(a[m] > a[i]){
+                bytt(a,i,m);
+                j++;
+            }
+            m++;
+        }
+
+        return j;
     }
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        throw new UnsupportedOperationException();
+        throw new IllegalStateException();
     }
 
     ///// Oppgave 3 //////////////////////////////////////
