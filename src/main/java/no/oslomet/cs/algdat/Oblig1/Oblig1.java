@@ -21,7 +21,7 @@ public class Oblig1 {
                 m++;
             }
         }
-        return m;
+        return a[a.length - 1];
     }
 
     //Hjelpe metode fra kompendiet
